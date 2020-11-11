@@ -10,7 +10,8 @@ public abstract class Contrato {
 	private Colaborador colaborador;
 	private boolean ativo;
 	
-	public Contrato(int id, Date dataInicio, Date dataEncerramento, Colaborador colaborador, boolean ativo) {
+	public Contrato(int id, Date dataInicio, Date dataEncerramento
+					, Colaborador colaborador, boolean ativo) {
 		super();
 		this.id = id;
 		this.dataInicio = dataInicio;
@@ -50,6 +51,11 @@ public abstract class Contrato {
 	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
 	}
+	
+	public void encerrarContrato() {
+		this.ativo = false;
+	}
+	
 	
 
 }
